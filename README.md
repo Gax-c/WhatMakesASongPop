@@ -1,3 +1,3 @@
 # What Makes A Song Pop?
-zju visualization course final project. 
+ZJU visualization course final project. 
 

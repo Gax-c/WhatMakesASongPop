@@ -45,11 +45,11 @@
       <a href="#cover" class="w3-bar-item w3-button"><b>SongsPop</b></a>
       <!-- Float links to the right. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
-        <a href="#firstPage" class="w3-bar-item w3-button">Development</a>
+        <a href="#firstPage" class="w3-bar-item w3-button">Songs</a>
         <a href="#secondPage" class="w3-bar-item w3-button">Country</a>
         <a href="#thirdPage" class="w3-bar-item w3-button">Parameters</a>
-        <a href="#fourthPage" class="w3-bar-item w3-button">Heatmap</a>
-        <a href="#fifthPage" class="w3-bar-item w3-button">Bubble</a>
+        <a href="#fourthPage" class="w3-bar-item w3-button">Relation</a>
+        <a href="#fifthPage" class="w3-bar-item w3-button">Development</a>
         <a href="#sixthPage" class="w3-bar-item w3-button">Key</a>
         <a href="#lastPage" class="w3-bar-item w3-button">About</a>
       </div>
@@ -75,24 +75,23 @@
       </div>
     </div>
     
-    <!--Development-->
+    <!--Songs-->
     <div class="section">
-      <div class="w3-container w3-padding-32" id="other_schools">
-        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
-          First, let's explore the development of music, as well as its parameters. 
+      <div class="w3-container w3-padding-32" id="nationwide">
+        <h3 class="section-title 3-border-bottom w3-border-light-grey w3-padding-16">
+          Let's have a more intuitive understanding of each pop song's streams. 
         </h3>
+        <span class="material-symbols-outlined">
+          rocket_launch
+        </span>
       </div>
+      <img src="img/utbm.png" style="position:absolute;left:850px;top:130px;width:500px;height:600px;">
       <div class="w3-row-padding row">
-        <h3>Several music parameters: Danceability, Acousticness, Energy, Liveness, Speechness, Positiveness.</h3>
-        <h4 class="instruction">Click on the chart to see the musical parameters of different years.</h4>
-        <div class="row">
-          <div class="col-md-6">
-            <img src="img/development.jpg" style="position:absolute;left:0px;top:30px;width:500px;height:450px;">
-          </div>  
-          <div id="development" style="position:relative;left:600px;top:10px;width:750px;height:500px;"></div>
-          <script src="js/development.js"></script>  
-        </div>
+      <h2></h2> We collect more than a hundred pop songs with their names and singers. 
+      <h3 class="instruction">Click on the dots to see more specific infomation of that single song.</h3>
       </div>
+      <div id="bubble" style="position:relative;left:40px;top:-10px;width:700px;height:500px;"></div>
+      <script src="js/bubble_map.js"></script>   
     </div>
 
     <!--Country-->
@@ -104,9 +103,9 @@
         Click on this pie diagram to see the percentage of pop music singers from each country. 
       </h4>
       <!-- <h5>3PA : 3-pointer balls attempted  3P% : the percentage of 3-pointer balls scored by those attempted<h5> -->
-      <img src="img/weekend.png" style="position:absolute;left:750px;top:190px;width:480px;height:500px;">
-      <img src="img/taylor.png" style="position:absolute;left:950px;top:190px;width:400px;height:500px;">
-      <img src="img/harry.png" style="position:absolute;left:1080px;top:145px;width:490px;height:550px;">
+      <img src="img/weekend.png" style="position:absolute;left:750px;top:190px;width:580px;height:500px;">
+      <img src="img/taylor.png" style="position:absolute;left:1000px;top:190px;width:400px;height:500px;">
+      <img src="img/harry.png" style="position:absolute;left:1100px;top:145px;width:570px;height:550px;">
       <div id="country" style="position:relative;left:0px;top:0px;width:800px;height:550px;"></div>
       <script src="js/country.js"></script> 
     </div>
@@ -130,7 +129,7 @@
       </div>
     </div>
 
-    <!--Heatmap-->
+    <!--Relation-->
     <div class="section">
       <div class="w3-container w3-padding-32">
         <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
@@ -151,24 +150,25 @@
       </div>
     </div>
 
-    <!--Bubble-->
+    <!--Development-->
     <div class="section">
-      <div class="w3-container w3-padding-32" id="nationwide">
-        <h3 class="section-title 3-border-bottom w3-border-light-grey w3-padding-16">
-          Let's have a more intuitive understanding of each pop song's streams. 
+      <div class="w3-container w3-padding-32" id="other_schools">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
+          First, let's explore the development of music, as well as its parameters. 
         </h3>
-        <span class="material-symbols-outlined">
-          rocket_launch
-        </span>
       </div>
-      <img src="img/utbm.png" style="position:absolute;left:850px;top:130px;width:500px;height:600px;">
       <div class="w3-row-padding row">
-      <h2></h2> We collect more than a hundred pop songs with their names and singers. 
-      <h3 class="instruction">Click on the dots to see more specific infomation of that single song.</h3>
+        <h3>Several music parameters: Danceability, Acousticness, Energy, Liveness, Speechness, Positiveness.</h3>
+        <h4 class="instruction">Click on the chart to see the musical parameters of different years.</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/development2.jpg" style="position:absolute;left:0px;top:30px;width:500px;height:450px;">
+          </div>  
+          <div id="development" style="position:relative;left:600px;top:10px;width:750px;height:500px;"></div>
+          <script src="js/development.js"></script>  
+        </div>
       </div>
-      <div id="bubble" style="position:relative;left:40px;top:-10px;width:700px;height:500px;"></div>
-      <script src="js/bubble_map.js"></script>   
-    </div>
+    </div>    
 
     <!--positions-->
     <!-- <div class="section">
