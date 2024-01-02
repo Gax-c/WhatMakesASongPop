@@ -73,7 +73,7 @@ var option = {
         left: 'center',
         bottom: '10%',
         inRange: {
-          color: ['blue', 'white', 'red']
+          color: ['#440046', '#F8F8E9', '#F3F5AF', '#DBBF93', '#D78851', '#BE5C37']
         },
         textStyle: {
           color: '#000'
