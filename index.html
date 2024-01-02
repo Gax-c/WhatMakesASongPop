@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/jquery.fullPage.js"></script>
+  <!-- 引入 vintage 主题 -->
+  <script src="js/essos.js"></script>
+  <title>What Makes A Song Pop?</title>
+
+  <!-- Load Google Font -->
+  <!--<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="css/sequences.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+  <script>
+      $(function () {
+          $('#fullpage').fullpage({
+              anchors: ["cover","firstPage", 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'lastPage'],
+          });
+      });
+  </script>
+</head>
+
+<body style="width: 100%;background: #f4f1e6">
+
+<div class="main-container">
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="#cover" class="w3-bar-item w3-button"><b>SongsPop</b></a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#firstPage" class="w3-bar-item w3-button">Development</a>
+        <a href="#secondPage" class="w3-bar-item w3-button">Country</a>
+        <a href="#thirdPage" class="w3-bar-item w3-button">Parameters</a>
+        <a href="#fourthPage" class="w3-bar-item w3-button">Heatmap</a>
+        <a href="#fifthPage" class="w3-bar-item w3-button">Bubble</a>
+        <a href="#sixthPage" class="w3-bar-item w3-button">Key</a>
+        <a href="#lastPage" class="w3-bar-item w3-button">About</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="fullpage">
+    <div class="section" id="cover_photo">
+      <div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div id="cover-text">
+          <h1><b>What Makes A Song Pop?</b></h1>
+          <h2 id="subtitle"><b><i>An exploration of parameters that makes a song pop.</i></b></h2>
+          <h2 id="story_begin">Do you like listening to music? Have you been paying attention to pop music?<br>
+            Have you ever considered why a song is popular?<br>
+            We are going to explore what parameters make the song a hit. 
+          </h2>
+          <br><br><br><br><br><br><br><br>
+          <div style="text-align: center">
+            <p><i style="color: white">Scroll to continue</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Development-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="other_schools">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
+          First, let's explore the development of music, as well as its parameters. 
+        </h3>
+      </div>
+      <div class="w3-row-padding row">
+        <h3>Several music parameters: Danceability, Acousticness, Energy, Liveness, Speechness, Positiveness.</h3>
+        <h4 class="instruction">Click on the chart to see the musical parameters of different years.</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/development.jpg" style="position:absolute;left:0px;top:30px;width:500px;height:450px;">
+          </div>  
+          <div id="development" style="position:relative;left:600px;top:10px;width:750px;height:500px;"></div>
+          <script src="js/development.js"></script>  
+        </div>
+      </div>
+    </div>
+
+    <!--Country-->
+    <div class="section w3-container w3-padding-32">
+      <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
+        Next, let's see where the singers of these pop songs come from.
+      </h3> 
+      <h4 class="instruction">
+        Click on this pie diagram to see the percentage of pop music singers from each country. 
+      </h4>
+      <!-- <h5>3PA : 3-pointer balls attempted  3P% : the percentage of 3-pointer balls scored by those attempted<h5> -->
+      <img src="img/weekend.png" style="position:absolute;left:750px;top:190px;width:480px;height:500px;">
+      <img src="img/taylor.png" style="position:absolute;left:950px;top:190px;width:400px;height:500px;">
+      <img src="img/harry.png" style="position:absolute;left:1080px;top:145px;width:490px;height:550px;">
+      <div id="country" style="position:relative;left:0px;top:0px;width:800px;height:550px;"></div>
+      <script src="js/country.js"></script> 
+    </div>
+
+    <!--Parameters-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="other_schools">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
+          Then, let's further explore the relationship between the average streams and some musical parameters. 
+        </h3>
+      </div>
+      <div class="w3-row-padding row">
+        <h2></h2> Streams is a critical standard for determining the popularity of a song. 
+        <h3 class="instruction">Click on the chart to see the detailed infomation.</h3>
+        <div class="row">
+          <div class="col-md-6">
+          </div>
+          <div id="parameters" style="position:relative;left:20px;top:0px;width: 1300px;height: 500px;"></div>
+          <script src="js/parameters.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <!--Heatmap-->
+    <div class="section">
+      <div class="w3-container w3-padding-32">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
+          And what's the relation between different musical parameters?
+        </h3>
+        <h4 class="instruction">
+          Hover on the chart to see the relations betweent different musical parameters.
+        </h4>
+      </div>
+      <div class="w3-row-padding row">
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="w3-row-padding row">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="img/heapmap.jpg" style="position:absolute;left:80px;top:180px;width:420px;height:530px;">
+        <div id="heatmap" style="position:absolute;right:40px;top:200px;width:850px;height:550px;"></div>
+        <script src="js/heatmap.js"></script>
+      </div>
+    </div>
+
+    <!--Bubble-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="nationwide">
+        <h3 class="section-title 3-border-bottom w3-border-light-grey w3-padding-16">
+          Let's have a more intuitive understanding of each pop song's streams. 
+        </h3>
+        <span class="material-symbols-outlined">
+          rocket_launch
+          </span>
+      </div>
+      <img src="img/utbm.png" style="position:absolute;left:850px;top:130px;width:500px;height:600px;">
+      <div class="w3-row-padding row">
+      <h2></h2> We collect more than a hundred pop songs with their names and singers. 
+      <h3 class="instruction">Click on the dots to see more specific infomation of that single song.</h3>
+      </div>
+      <div id="bubble" style="position:relative;left:40px;top:-10px;width:700px;height:500px;"></div>
+      <script src="js/bubble_map.js"></script>   
+    </div>
+
+    <!--positions-->
+    <!-- <div class="section">
+      <div class="w3-container w3-padding-32" id="timeline_section">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">How players of five positions differ in 3-pointers shot?</h3>
+      </div>
+      <div class="w3-row-padding row">
+        <div id="timelineIntro">
+          <h4>Basketball is a team sport and players are generally divided into five positions to play different tactical roles on the court.</h4>
+          <h3 class="instruction">Hover on the table to see the position difference in 3P% and 3PAr between 1980-2017.</h3>
+          <br>
+          <br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <img src="img/court.png" style="position:absolute;left:-50px;top:220px;width:740px;height:600px;">
+        </div>
+      </div>
+    </div> -->
+
+    <!--Key-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="responses">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">
+          Additionally, what effect do key have on the popularity of music?
+          <em>Let's show it!</em>
+        </h3>
+      </div>
+      <div class="w3-row-padding row">
+        In music, the key refers to the tonic note and its corresponding scale upon which a musical piece is centered. 
+        <br>
+        The key provides a framework for organizing and interpreting the various pitches and harmonies within a composition.
+      </div>
+      <div id="key" style="position:relative;left:50px;top:10px;width:1400px;height:500px;"></div>
+      <script src="js/key.js"></script>  
+    </div>
+
+    <!--about-->
+    <div class="section w3-container w3-padding-32 last-section">
+      <!--about-->
+      <div class="w3-container" id="about">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">About this Project</h3>
+      </div>
+      <div class="w3-row w3-padding-32">
+        <div class="col-md-6">
+          <div class="w3-row">
+            <h4>Our Team</h4>
+            <div style="width: 80%; margin-left: 11%">
+              <div class="w3-third" style="text-align: center">
+                <img src="img/gax.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%; border-radius: 100%;">
+                <h4><a href="https://github.com/Gax-c">Zichen Xie</a></h4>
+                <h5>Zichen is a junior in ZJU concentrating in Software Engineering and Artifical Intelligence.</h5>
+              </div>
+              <div class="w3-third" style="text-align: center">
+                <img src="img/bohao.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%; border-radius: 100%;">
+                <h4>Bohao Wang</h4>
+                <h5>Bohao is a junior in ZJU.</h5>
+              </div>
+              <div class="w3-third" style="text-align: center">
+                <img src="img/yicheng.jpg" class="w3-round" alt="Random Name" style="width:80%; border-radius: 100%;">
+                <h4><br>Yicheng Ji</h4>
+                <h5>Yicheng is a junior in ZJU.</h5>
+              </div>
+            </div>
+          </div>
+
+          <!--Notes-->
+          <div class="w3-row">
+            <h4>Notes</h4>
+            <h5>1. We would like to take special note to figure what parameters that makes the song a hit.  
+              All of us three love listening to music, which motivated us to further do reseach on this topic.
+              And that's why this project come into being. 
+            </h5>
+            <h5>
+              2. Our visualizations are based on publicly available data and information; any and all potential errors
+              reflect those of these online resources.
+            </h5>
+            <h5>
+              3. This project is available at <a href="https://github.com/Gax-c/WhatMakesASongPop">https://github.com/Gax-c/WhatMakesASongPop</a>. 
+              You can also view the website at <a href="https://gax-c.github.io/WhatMakesASongPop">https://gax-c.github.io/WhatMakesASongPop</a>.
+            </h5>
+            <h5>
+              4. If you have any questions, please feel free to contact us!
+            </h5>
+          </div>
+        </div>
+
+        <!--Reference-->
+        <div class="col-md-6">
+          <div class="w3-row">
+            <h4>References</h4>
+            <ol id="reference_list" style="font-size: 12px;">
+              <li>Best Songs on Spotify for every year <a href = "https://www.kaggle.com/datasets/conorvaneden/best-songs-on-spotify-for-every-year-2000-2023">(2000-2023)</a>.</li>
+              <li>Most Streamed Spotify Songs <a href="https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023">2023</a>.</li>
+              <li><a href="https://www.kaggle.com/datasets/hedizekri/top-charts-artists-country">Top charts artists country</a>.</li>
+              <li>World's Spotify <a href="https://www.kaggle.com/datasets/miquelneck/worlds-spotify-top-50-playlist-musicality-data">TOP-50</a> playlist musicality data</li>
+              <li>Spotify's Hits: <a href= "https://www.kaggle.com/code/mabelhsu/spotify-s-hits-what-makes-a-song-pop" >What Makes a Song Pop?</a></li>
+              <li><a href= "https://haixing-yin.github.io/visualization-final-project/">W.O.W. Where are Our Women?</a></li> 
+              <li><a href= "https://github.com/RyanFcr/visualization-final-project">Is raining three worth it?</a></li> 
+            </ol>
+          </div>
+        </div>
+
+        <!--Cooperation details-->
+        <div class="col-md-6">
+          <div class="w3-row">
+            <h4>Cooperation details</h4>
+            <ol id="reference_list" style="font-size: 12px;">
+              <li>Zichen Xie: Responsible for the creation and beautification of web pages.</li>
+              <li>Bohao Wang: Responsible for the creation and beautification of visual charts and diagrams.</li>
+              <li>Yicheng Ji: Responsible for the creation and beautification of visual charts and diagrams.</li>
+            </ol>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Development -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+<!-- Production -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<!-- Load JS libraries -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/d3.js"></script>
+<script src="js/d3-tip.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript">
+    // Hack to make this example display correctly in an iframe on bl.ocks.org
+    d3.select(self.frameElement).style("height", "700px");
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.0/d3-legend.js"></script>
+
+<!-- Visualization objects -->
+<script src="js/barChart.js"></script>
+<script type="text/javascript" src="js/sequences.js"></script>
+
+<!-- Load data, create visualizations -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
